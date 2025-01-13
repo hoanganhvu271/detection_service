@@ -20,7 +20,6 @@ __pycache__/
 *.env
 .env.*
 instance/
-config.py
 *.sqlite3
 
 # File/Thư mục từ IDE và Editor

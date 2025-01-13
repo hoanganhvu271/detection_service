@@ -6,3 +6,4 @@ model = load_model()
 
 def detect(data):
     return model.predict_proba(data)
+
