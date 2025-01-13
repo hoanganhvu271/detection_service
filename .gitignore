@@ -1,0 +1,53 @@
+# Môi trường ảo Python
+venv/
+env/
+.venv/
+.virtualenv/
+
+# File biên dịch Python
+*.pyc
+*.pyo
+__pycache__/
+
+# File tạm hoặc cache
+*.log
+*.pot
+*.py~
+*.swp
+*.swo
+
+# File cấu hình cá nhân hoặc thông tin nhạy cảm
+*.env
+.env.*
+instance/
+config.py
+*.sqlite3
+
+# File/Thư mục từ IDE và Editor
+.vscode/
+.idea/
+*.iml
+
+# File hệ thống
+.DS_Store
+Thumbs.db
+
+# Output của Flask hoặc build process
+*.db
+*.bak
+*.pid
+*.seed
+*.backup
+*.dump
+
+# Thư viện và các file build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test coverage
+htmlcov/
+coverage.xml
+.coverage
+.cache
