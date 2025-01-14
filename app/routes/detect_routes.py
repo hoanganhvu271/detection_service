@@ -15,9 +15,9 @@ def detect_get():
 @detect_bp.route('/detect', methods=['POST'])
 def detect_post():
     data = request.get_json()
-    print(data)
+    # print(data)
     
-    print("Method:", request.method)
+    # print("Method:", request.method)
     if not data:
         return jsonify({'error': 'No input data provided'}), 400
         
