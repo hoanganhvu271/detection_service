@@ -16,7 +16,7 @@ def detect(data):
         preprocessed_data = preprocess(item)
         result = model.predict_proba(preprocessed_data)
         try:
-            if result[0][1] > os.getenv('THRESHOLD', 0.00):
+            if result[0][1] > os.getenv('THRESHOLD', 0.65):
                 item['prediction'] = result[0][1]
                 item['time'] = datetime.now()
                 insert_new_dataset(normalize(item))
