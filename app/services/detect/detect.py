@@ -5,6 +5,7 @@ import os
 from .load import load_model
 from .preprocess import preprocess, normalize
 from app.services.dataset.insert_datasets import insert_new_dataset
+from datetime import datetime
 
 model = load_model()
 
@@ -15,7 +16,9 @@ def detect(data):
         preprocessed_data = preprocess(item)
         result = model.predict_proba(preprocessed_data)
         try:
-            if result[0][1] > os.getenv('THRESHOLD', 0.65):
+            if result[0][1] > os.getenv('THRESHOLD', 0.00):
+                item['prediction'] = result[0][1]
+                item['time'] = datetime.now()
                 insert_new_dataset(normalize(item))
         except Exception as e:
             print('Error inserting data:', str(e))

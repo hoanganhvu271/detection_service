@@ -34,7 +34,7 @@ def remove_missing(df_new, title, mlb):
   for clas in classes:
     if clas in df_new[title]:
         df_classes.loc[0, clas] = 1
-        # print(clas)
+        print(clas)
     else:
         df_classes.loc[0, clas] = 0
 
